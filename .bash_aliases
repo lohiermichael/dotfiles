@@ -22,6 +22,7 @@ function man() {
 # ssh connections
 alias ssho='ssh 6WIND-out-VPN'
 alias sshi='ssh 6WIND-in-VPN'
+alias sshw=' ssh -D 8888 -C -N 6WIND-out-VPN'
 
 alias v='vim'
 alias vi='vim'
