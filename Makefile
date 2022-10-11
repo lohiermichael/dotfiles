@@ -13,6 +13,7 @@ uninstall: uninstall-dotfiles
 DOTFILES += .bash_profile
 DOTFILES += .bashrc
 DOTFILES += .bash_aliases
+DOTFILES += .gitconfig
 
 .PHONY: dotfiles
 dotfiles: $(addprefix $(HOME)/,$(DOTFILES))

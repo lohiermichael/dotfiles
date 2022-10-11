@@ -1,0 +1,54 @@
+[alias]
+  # Pretty log output
+  hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
+  ca = commit --amend
+  can = commit --ament --no-edit
+  co = checkout
+  cs = commit --signoff
+  l = log --oneline --topo-order
+  ra = rebase --abort
+  rc = rebase --continue
+  ri = rebase --interactive
+  rp = reset -p HEAD^
+  s = status --short --branch
+  wip = commit -asm 'wip'
+
+[color]
+  # Use colors in Git commands that are capable of colored output when
+  # outputting to the terminal. (This is the default setting in Git ≥ 1.8.4.)
+  ui = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[core]
+	excludesfile = /Users/michaellohier/.gitignore
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[credential]
+	helper = osxkeychain
+
+[diff]
+	tool = default-difftool
+
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[init]
+	defaultBranch = master
+
+[user]
+	name = Michael Lohier
+	email = lohiermichael@gmail.com
