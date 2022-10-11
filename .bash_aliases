@@ -19,5 +19,9 @@ function man() {
 	command man "$@"
 }
 
+# ssh connections
+alias ssho='ssh 6WIND-out-VPN'
+alias sshi='ssh 6WIND-in-VPN'
+
 alias v='vim'
 alias vi='vim'
