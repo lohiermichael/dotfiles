@@ -1,3 +1,4 @@
+# Enable easier navigation
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -9,7 +10,7 @@ function mcd() {
     mkdir "$1" && cd "$1"
 }
 
-# enable color in man pages: bold is CYAN, underline is GREEN
+# Enable color in man pages: bold is CYAN, underline is GREEN
 function man() {
 	LESS_TERMCAP_md=$'\e[1;36m' \
 	LESS_TERMCAP_me=$'\e[0m' \
@@ -19,7 +20,7 @@ function man() {
 	command man "$@"
 }
 
-# ssh connections
+# Set up personal ssh connections
 alias ssho='ssh 6WIND-out-VPN'
 alias sshi='ssh 6WIND-in-VPN'
 alias sshw=' ssh -D 8888 -C -N 6WIND-out-VPN &'
