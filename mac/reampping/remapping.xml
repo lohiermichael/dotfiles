@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Place in ~/Library/LaunchAgents/ -->
+<!-- launchctl load com.ldaws.CapslockBackspace.plist -->
+<!-- Remapping tables can be found here: -->
+<!-- https://developer.apple.com/library/archive/technotes/tn2450/_index.html#//apple_ref/doc/uid/DTS40017618-CH1-KEY_TABLE_USAGES -->
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.ldaws.CapslockEsc</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/hidutil</string>
+      <string>property</string>
+      <string>--set</string>
+      <string>
+      <!--
+      Switch Caps lock and Escape
+      0x700000039: Caps lock
+      0x700000029: Escape
+       -->
+        {
+          "UserKeyMapping": [
+            {
+              "HIDKeyboardModifierMappingSrc":0x700000039,
+              "HIDKeyboardModifierMappingDst":0x700000029
+            },
+            {
+              "HIDKeyboardModifierMappingSrc":0x700000029,
+              "HIDKeyboardModifierMappingDst":0x700000039
+            }
+          ]
+        }
+      </string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+  </dict>
+</plist>
