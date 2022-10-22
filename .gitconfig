@@ -2,7 +2,7 @@
   # Pretty log output
   hist = log --graph --pretty=format:'%Cred%h%Creset %s%C(yellow)%d%Creset %Cgreen(%cr)%Creset [%an]' --abbrev-commit --date=relative
   ca = commit --amend
-  can = commit --ament --no-edit
+  can = commit --amend --no-edit
   co = checkout
   cs = commit --signoff
   l = log --oneline --topo-order
