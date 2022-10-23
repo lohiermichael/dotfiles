@@ -27,3 +27,6 @@ alias sshw=' ssh -D 8888 -C -N 6WIND-out-VPN &'
 
 alias v='vim'
 alias vi='vim'
+
+# Always use python3
+alias python='python3'
