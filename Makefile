@@ -10,9 +10,9 @@ install: dotfiles
 uninstall: uninstall-dotfiles
 	@:
 
+DOTFILES += .aliases
 DOTFILES += .bash_profile
 DOTFILES += .bashrc
-DOTFILES += .bash_aliases
 DOTFILES += .exports
 DOTFILES += .gitconfig
 DOTFILES += .zshrc
