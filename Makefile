@@ -15,6 +15,7 @@ DOTFILES += .bashrc
 DOTFILES += .bash_aliases
 DOTFILES += .exports
 DOTFILES += .gitconfig
+DOTFILES += .zshrc
 
 .PHONY: dotfiles
 dotfiles: $(addprefix $(HOME)/,$(DOTFILES))
