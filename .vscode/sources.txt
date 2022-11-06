@@ -1,0 +1,2 @@
+Power10k shell:
+https://github.com/romkatv/powerlevel10k/issues/671

@@ -15,6 +15,7 @@ DOTFILES += .bash_profile
 DOTFILES += .bashrc
 DOTFILES += .exports
 DOTFILES += .gitconfig
+DOTFILES += .p10k.zsh
 DOTFILES += .zshrc
 
 .PHONY: dotfiles
@@ -31,9 +32,11 @@ uninstall-dotfiles:
 	@$(foreach f,$(addprefix $(HOME)/,$(DOTFILES)), rm -fv $f;)
 
 BREWS += tree
+BREWS += zsh
 
 # Installation as a desktop app
 BREWS_CASK += docker
+BREWS_CASK += iterm2
 
 .PHONY: brew
 brew:
