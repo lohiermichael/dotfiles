@@ -31,3 +31,6 @@ alias vi='vim'
 # Always use python3
 alias python='python3'
 alias pip='pip3'
+
+# Utils
+alias dotfiles='code ~/dev/config/dotfiles'
