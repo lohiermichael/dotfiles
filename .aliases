@@ -2,8 +2,8 @@
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias ll='ls -l'
-alias la='ls -lA'
+alias ll='ls -lh'
+alias la='ls -lhA'
 alias mkdir='mkdir -p'
 
 function mcd() {
