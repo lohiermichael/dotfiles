@@ -110,5 +110,10 @@ if [ -f ~/.aliases ]; then
 	source ~/.aliases
 fi
 
+# Export important variables
+if [ -f ~/.exports ]; then
+	source ~/.exports
+fi
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
