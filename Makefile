@@ -33,6 +33,7 @@ uninstall-dotfiles:
 
 BREWS += tree
 BREWS += zsh
+BREWS += terminal-notifier
 
 # Installation as a desktop app
 BREWS_CASK += docker
