@@ -20,10 +20,6 @@ function man() {
 	command man "$@"
 }
 
-# Set up personal ssh connections
-alias ssho='ssh -D 8888 -C 6WIND-out-VPN'
-alias sshi='ssh 6WIND-in-VPN'
-
 alias v='vim'
 alias vi='vim'
 
