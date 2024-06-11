@@ -36,6 +36,9 @@ return packer.startup(function(use)
   -- lua functions that many plugins use
   use("nvim-lua/plenary.nvim")
 
+  -- color scheme
+  use("bluz71/vim-nightfly-guicolors")
+
   if packer_bootstrap then
     require("packer").sync()
   end
