@@ -49,6 +49,9 @@ return packer.startup(function(use)
   use("tpope/vim-surround")
   use("vim-scripts/ReplaceWithRegister")
 
+  -- comment
+  use("numToStr/Comment.nvim")
+
   if packer_bootstrap then
     require("packer").sync()
   end
