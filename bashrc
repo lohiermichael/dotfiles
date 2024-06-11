@@ -4,6 +4,6 @@ if [ -f ~/.exports ]; then
 fi
 
 # Set up aliases
-if [ -f ~/.aliases ]; then
-	source ~/.aliases
+if [ -f ~/.bash_aliases ]; then
+	source ~/.bash_aliases
 fi

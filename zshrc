@@ -106,8 +106,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if [ -f ~/.aliases ]; then
-	source ~/.aliases
+if [ -f ~/.bash_aliases ]; then
+	source ~/.bash_aliases
 fi
 
 # Export important variables

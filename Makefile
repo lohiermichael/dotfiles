@@ -10,19 +10,19 @@ install: dotfiles
 uninstall: uninstall-dotfiles
 	@:
 
-DOTFILES += .aliases
-DOTFILES += .bash_profile
-DOTFILES += .bashrc
-DOTFILES += .config/nvim
-DOTFILES += .exports
-DOTFILES += .gitconfig
-DOTFILES += .p10k.zsh
-DOTFILES += .zshrc
+DOTFILES += bash_aliases
+DOTFILES += bash_profile
+DOTFILES += bashrc
+DOTFILES += config/nvim
+DOTFILES += exports
+DOTFILES += gitconfig
+DOTFILES += p10k.zsh
+DOTFILES += zshrc
 
 .PHONY: dotfiles
-dotfiles: $(addprefix $(HOME)/,$(DOTFILES))
+dotfiles: $(addprefix $(HOME)/.,$(DOTFILES))
 
-$(HOME)/%: %
+$(HOME)/.%: %
 	@! [ -e $@ ] || rm -rf -- $@
 	@mkdir -pv $(@D)
 	@ln -svf $(PWD)/$< $@
@@ -30,9 +30,11 @@ $(HOME)/%: %
 
 .PHONY: uninstall-dotfiles
 uninstall-dotfiles:
-	@$(foreach f,$(addprefix $(HOME)/,$(DOTFILES)), rm -fv $f;)
+	@$(foreach f,$(addprefix $(HOME)./,$(DOTFILES)), rm -fv $f;)
 
+BREWS += fd
 BREWS += neovim
+BREWS += ripgrep
 BREWS += terminal-notifier
 BREWS += tree
 BREWS += zsh
