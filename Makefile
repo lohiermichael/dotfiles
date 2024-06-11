@@ -31,9 +31,9 @@ $(HOME)/%: %
 uninstall-dotfiles:
 	@$(foreach f,$(addprefix $(HOME)/,$(DOTFILES)), rm -fv $f;)
 
+BREWS += terminal-notifier
 BREWS += tree
 BREWS += zsh
-BREWS += terminal-notifier
 
 # Installation as a desktop app
 BREWS_CASK += docker
