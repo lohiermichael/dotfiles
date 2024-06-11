@@ -20,6 +20,9 @@ function man() {
 	command man "$@"
 }
 
+alias n='nvim'
+alias nv='nvim'
+
 alias v='vim'
 alias vi='vim'
 

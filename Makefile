@@ -13,6 +13,7 @@ uninstall: uninstall-dotfiles
 DOTFILES += .aliases
 DOTFILES += .bash_profile
 DOTFILES += .bashrc
+DOTFILES += .config/nvim
 DOTFILES += .exports
 DOTFILES += .gitconfig
 DOTFILES += .p10k.zsh
@@ -31,6 +32,7 @@ $(HOME)/%: %
 uninstall-dotfiles:
 	@$(foreach f,$(addprefix $(HOME)/,$(DOTFILES)), rm -fv $f;)
 
+BREWS += neovim
 BREWS += terminal-notifier
 BREWS += tree
 BREWS += zsh
