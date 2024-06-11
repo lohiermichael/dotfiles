@@ -29,6 +29,9 @@
   old = red bold
   new = green bold
 
+[commit]
+	verbose = true
+
 [core]
 	excludesfile = /Users/michaellohier/.gitignore
 
