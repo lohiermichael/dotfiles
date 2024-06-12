@@ -17,6 +17,7 @@ DOTFILES += config/nvim
 DOTFILES += exports
 DOTFILES += gitconfig
 DOTFILES += p10k.zsh
+DOTFILES += tmux.conf
 DOTFILES += zshrc
 
 .PHONY: dotfiles
@@ -36,6 +37,7 @@ BREWS += fd
 BREWS += neovim
 BREWS += ripgrep
 BREWS += terminal-notifier
+BREWS += tmux
 BREWS += tree
 BREWS += zsh
 
