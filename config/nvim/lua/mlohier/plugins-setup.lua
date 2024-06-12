@@ -83,6 +83,31 @@ return packer.startup(function(use)
   -- useful snippets
   use("rafamadriz/friendly-snippets")
 
+  -- managing & installing lsp servers, linters & formatters
+  use("williamboman/mason.nvim")
+  use("williamboman/mason-lspconfig.nvim") 
+
+  -- configuring lsp servers
+  -- easily configure language servers
+  use("neovim/nvim-lspconfig") 
+  -- for autocompletion
+  use("hrsh7th/cmp-nvim-lsp")
+  -- enhanced lsp uis
+  use({
+    "glepnir/lspsaga.nvim",
+    branch = "main",
+    requires = {
+      { "nvim-tree/nvim-web-devicons" },
+      { "nvim-treesitter/nvim-treesitter" },
+    },
+  }) 
+  -- additional functionality for typescript server
+  -- (e.g. rename file & update imports)
+  use("jose-elias-alvarez/typescript.nvim") 
+  -- vs-code like icons for autocompletion
+  use("onsails/lspkind.nvim")
+
+
   if packer_bootstrap then
     require("packer").sync()
   end
