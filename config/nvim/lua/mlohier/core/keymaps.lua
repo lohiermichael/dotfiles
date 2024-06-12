@@ -3,9 +3,15 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
--- general keymaps
 -- template:
 -- keymap.set(<vim_mode>, <used_cmd>, <replaced_cmd>)
+
+----------------------
+-- general keymaps
+----------------------
+
+-- delete single character without copying into register
+keymap.set("n", "x", '"_x')
 
 ----------------------
 -- window management
