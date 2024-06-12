@@ -107,6 +107,22 @@ return packer.startup(function(use)
   -- vs-code like icons for autocompletion
   use("onsails/lspkind.nvim")
 
+  -- treesitter configuration
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      local ts_update = require("nvim-treesitter.install").update(
+        { with_sync = true }
+      )
+      ts_update()
+    end,
+  })
+
+  -- auto closing
+  -- autoclose parens, brackets, quotes, etc...
+  use("windwp/nvim-autopairs")
+  -- autoclose tags
+  use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
 
   if packer_bootstrap then
     require("packer").sync()
