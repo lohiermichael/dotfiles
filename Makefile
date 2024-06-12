@@ -18,6 +18,7 @@ DOTFILES += exports
 DOTFILES += gitconfig
 DOTFILES += p10k.zsh
 DOTFILES += tmux.conf
+DOTFILES += vimrc
 DOTFILES += zshrc
 
 .PHONY: dotfiles
