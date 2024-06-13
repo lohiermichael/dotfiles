@@ -76,3 +76,8 @@ api.nvim_create_autocmd("BufReadPost", {
 -- set a vertical white line at 80 characters
 opt.colorcolumn = "80"
 cmd [[highlight ColorColumn ctermbg=none guibg=white]]
+
+-- set spell checker
+-- see: https://www.youtube.com/watch?v=KoL-2WTlr04 for shortcuts
+opt.spelllang = 'en_us'
+opt.spell = true
