@@ -1,5 +1,7 @@
-local api = vim.api -- for conciseness
-local opt = vim.opt -- for conciseness
+-- for conciseness
+local api = vim.api
+local cmd = vim.cmd
+local opt = vim.opt
 
 -- line numbers
 opt.number = true
@@ -70,3 +72,7 @@ api.nvim_create_autocmd("BufReadPost", {
     end
   end,
 })
+
+-- set a vertical white line at 80 characters
+opt.colorcolumn = "80"
+cmd [[highlight ColorColumn ctermbg=none guibg=white]]
