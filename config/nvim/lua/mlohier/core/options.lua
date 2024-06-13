@@ -1,3 +1,4 @@
+local api = vim.api -- for conciseness
 local opt = vim.opt -- for conciseness
 
 -- line numbers
@@ -6,16 +7,16 @@ opt.relativenumber = true
 -- -- uncomment if relative numbering everywhere is
 -- -- annoying
 -- Not having relative numbers in insert mode
--- vim.api.nvim_create_autocmd("InsertEnter", {
+-- api.nvim_create_autocmd("InsertEnter", {
 --   pattern = "*",
 --   callback = function()
---     vim.opt.relativenumber = false
+--     opt.relativenumber = false
 --   end
 -- })
--- vim.api.nvim_create_autocmd("InsertLeave", {
+-- api.nvim_create_autocmd("InsertLeave", {
 --   pattern = "*",
 --   callback = function()
---     vim.opt.relativenumber = true
+--     opt.relativenumber = true
 --   end
 -- })
 
@@ -55,3 +56,17 @@ opt.splitbelow = true
 
 -- consider "-" as part of a word
  opt.iskeyword:append("-")
+
+-- automatically save and load cursor position in files
+api.nvim_create_augroup("restore_cursor_position", { clear = true })
+api.nvim_create_autocmd("BufReadPost", {
+  group = "restore_cursor_position",
+  pattern = "*",
+  callback = function()
+    local mark = vim.api.nvim_buf_get_mark(0, '"')
+    local line_count = vim.api.nvim_buf_line_count(0)
+    if mark[1] > 0 and mark[1] <= line_count then
+      pcall(vim.api.nvim_win_set_cursor, 0, mark)
+    end
+  end,
+})
