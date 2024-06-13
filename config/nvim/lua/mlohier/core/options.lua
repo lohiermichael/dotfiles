@@ -81,3 +81,10 @@ cmd [[highlight ColorColumn ctermbg=none guibg=white]]
 -- see: https://www.youtube.com/watch?v=KoL-2WTlr04 for shortcuts
 opt.spelllang = 'en_us'
 opt.spell = true
+
+-- highlight trailing spaces
+cmd([[
+    autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=#ff0000
+    autocmd ColorScheme * match ExtraWhitespace /\s\+$/
+]])
+
