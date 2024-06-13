@@ -30,10 +30,10 @@
   new = green bold
 
 [commit]
-	verbose = true
+  verbose = true
 
 [core]
-	excludesfile = /Users/michaellohier/.gitignore
+  excludesfile = /Users/michaellohier/.gitignore
 
 [color "status"]
   added = yellow
@@ -41,17 +41,17 @@
   untracked = cyan
 
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 
 [diff]
-	tool = default-difftool
+  tool = default-difftool
 
 [difftool "default-difftool"]
     cmd = code --wait --diff $LOCAL $REMOTE
 
 [init]
-	defaultBranch = master
+  defaultBranch = master
 
 [user]
-	name = Michael Lohier
-	email = lohiermichael@gmail.com
+  name = Michael Lohier
+  email = lohiermichael@gmail.com
