@@ -4,7 +4,12 @@ local ensure_packer = function()
   local fn = vim.fn
   local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ "git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path })
+    fn.system(
+      {
+        "git", "clone", "--depth", "1",
+        "https://github.com/wbthomason/packer.nvim", install_path
+      }
+    )
     vim.cmd([[packadd packer.nvim]])
     return true
   end
@@ -85,11 +90,11 @@ return packer.startup(function(use)
 
   -- managing & installing lsp servers, linters & formatters
   use("williamboman/mason.nvim")
-  use("williamboman/mason-lspconfig.nvim") 
+  use("williamboman/mason-lspconfig.nvim")
 
   -- configuring lsp servers
   -- easily configure language servers
-  use("neovim/nvim-lspconfig") 
+  use("neovim/nvim-lspconfig")
   -- for autocompletion
   use("hrsh7th/cmp-nvim-lsp")
   -- enhanced lsp uis
@@ -100,10 +105,10 @@ return packer.startup(function(use)
       { "nvim-tree/nvim-web-devicons" },
       { "nvim-treesitter/nvim-treesitter" },
     },
-  }) 
+  })
   -- additional functionality for typescript server
   -- (e.g. rename file & update imports)
-  use("jose-elias-alvarez/typescript.nvim") 
+  use("jose-elias-alvarez/typescript.nvim")
   -- vs-code like icons for autocompletion
   use("onsails/lspkind.nvim")
 
