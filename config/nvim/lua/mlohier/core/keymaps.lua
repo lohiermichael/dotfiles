@@ -17,7 +17,7 @@ keymap.set("n", "x", '"_x')
 -- window management
 ----------------------
 
--- split window verticall-- split window vertically
+-- split window vertically
 keymap.set("n", "<leader>v", "<C-w>v")
 
 -- split window horizontally
