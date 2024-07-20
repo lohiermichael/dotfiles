@@ -40,8 +40,7 @@ keymap.set("n", "<leader>tx", ":tabclose<CR>")
 --  go to next tab
 keymap.set("n", "<leader>tk", ":tabn<CR>")
 --  go to previous tab
-keymap.set("n", "<leader>tj", ":tabp<CR>"
-)
+keymap.set("n", "<leader>tj", ":tabp<CR>")
 
 -- vim-maximizer
 keymap.set("n", "<leader>m", ":MaximizerToggle<CR>")
