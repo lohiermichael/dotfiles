@@ -53,16 +53,16 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 ----------------------
 
 -- find files within current working directory, respects .gitignore
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 -- find string in current working directory as you type
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
+keymap.set("n", "<leader>fs", ":Telescope live_grep<CR>")
 -- find string under cursor in current working directory
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
+keymap.set("n", "<leader>fc", ":Telescope grep_string<CR>")
 -- list open buffers in current neovim instance
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
+keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 -- list available help tags
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>"
-)
+keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
+
 
 ----------------------
 -- specific
