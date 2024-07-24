@@ -13,6 +13,7 @@ uninstall: uninstall-dotfiles
 DOTFILES += bash_aliases
 DOTFILES += bash_profile
 DOTFILES += bashrc
+DOTFILES += cheatsheet_shortcuts.txt
 DOTFILES += config/nvim
 DOTFILES += exports
 DOTFILES += gitconfig

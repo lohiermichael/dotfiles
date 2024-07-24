@@ -1,0 +1,12 @@
+Neovim
+------
+
+Mode: normal
+
+- Leader - h -> split horizontally
+- Leader - v -> split vertically
+- Leader - x -> close window
+
+- g - d      -> go to definition
+- C - i      -> go backward in the jump list
+- C - o      -> go forward in the jump list

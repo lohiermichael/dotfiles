@@ -34,3 +34,4 @@ alias pip='pip3'
 
 # Utils
 alias dotfiles='code ~/dev/config/dotfiles'
+alias cs='n ~/.cheatsheet_shortcuts.txt'
