@@ -10,3 +10,10 @@ Mode: normal
 - g - d      -> go to definition
 - C - i      -> go backward in the jump list
 - C - o      -> go forward in the jump list
+
+# Spell checker (explanations: https://www.youtube.com/watch?v=KoL-2WTlr04)
+- z - =      -> open up suggestions to replace a misspelled word
+- [ - s      -> jump to next misspelled word
+- ] - s      -> jump to previous misspelled word
+- :spellr    -> repeat the last correction to all upcoming word
+- z - g      -> add a word to a new dictionary
