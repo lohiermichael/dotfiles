@@ -11,6 +11,11 @@ Mode: normal
 - C - i      -> go backward in the jump list
 - C - o      -> go forward in the jump list
 
+Mode: insert
+
+- C - Space  -> show option to complete
+
+
 # Spell checker (explanations: https://www.youtube.com/watch?v=KoL-2WTlr04)
 - z - =      -> open up suggestions to replace a misspelled word
 - [ - s      -> jump to next misspelled word
