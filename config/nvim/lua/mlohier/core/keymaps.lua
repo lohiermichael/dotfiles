@@ -7,7 +7,7 @@ local keymap = vim.keymap -- for conciseness
 -- keymap.set(<vim_mode>, <used_cmd>, <replaced_cmd>)
 
 ----------------------
--- general keymaps
+-- general key maps
 ----------------------
 
 -- delete single character without copying into register
