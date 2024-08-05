@@ -60,6 +60,12 @@ keymap.set("n", "<leader>fb", ":Telescope buffers<CR>")
 -- list available help tags
 keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>")
 
+----------------------
+-- git
+----------------------
+
+keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
+keymap.set("n", "<leader>gbl", ":Gitsigns blame_line<CR>", {})
 
 ----------------------
 -- specific
