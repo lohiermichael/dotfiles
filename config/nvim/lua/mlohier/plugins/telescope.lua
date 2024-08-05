@@ -27,6 +27,15 @@ telescope.setup({
       },
     },
   },
+  pickers = {
+    find_files = {
+      hidden = true,  -- Show hidden files
+      find_command = { 'rg', '--files', '--hidden', '--no-ignore' },  -- Use ripgrep with `--no-ignore`
+    },
+  },
+  defaults = {
+    file_ignore_patterns = {},  -- No custom ignore patterns
+  },
 })
 
 telescope.load_extension("fzf")

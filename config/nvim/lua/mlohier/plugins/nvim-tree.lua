@@ -32,4 +32,8 @@ nvimtree.setup({
       },
     },
   },
+  git = {
+    enable = true,
+    ignore = false,  -- Show git ignored files
+  },
 })
