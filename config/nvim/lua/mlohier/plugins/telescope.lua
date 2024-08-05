@@ -21,9 +21,6 @@ telescope.setup({
 
         -- move to next result
         ["<C-j>"] = actions.move_selection_next,
-
-        -- send selected to quickfixlist
-        ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
       },
     },
   },
