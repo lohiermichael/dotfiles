@@ -133,6 +133,14 @@ return packer.startup(function(use)
   -- show line modifications on left hand side
   use("lewis6991/gitsigns.nvim")
 
+  -- Markdown Preview plugin
+  use({
+    'iamcco/markdown-preview.nvim',
+    run = 'cd app && npm install',
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end,
+    ft = { 'markdown' },
+  })
+
   if packer_bootstrap then
     require("packer").sync()
   end
