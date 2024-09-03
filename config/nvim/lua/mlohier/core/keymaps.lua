@@ -13,6 +13,9 @@ local keymap = vim.keymap -- for conciseness
 -- delete single character without copying into register
 keymap.set("n", "x", '"_x')
 
+-- clear search
+keymap.set('n', '/', ':nohlsearch<CR>', { noremap = true, silent = true })
+
 ----------------------
 -- window management
 ----------------------
