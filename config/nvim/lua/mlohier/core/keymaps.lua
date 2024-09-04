@@ -14,7 +14,7 @@ local keymap = vim.keymap -- for conciseness
 keymap.set("n", "x", '"_x')
 
 -- clear search
-keymap.set('n', '/', ':nohlsearch<CR>', { noremap = true, silent = true })
+keymap.set('n', '<leader>/', ':nohlsearch<CR>', { noremap = true, silent = true })
 
 ----------------------
 -- window management
