@@ -84,7 +84,12 @@ opt.spell = true
 
 -- highlight trailing spaces
 cmd([[
+    " Define the highlight for trailing spaces
     autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=#ff0000
-    autocmd ColorScheme * match ExtraWhitespace /\s\+$/
+
+    " Apply the match pattern for trailing spaces
+    autocmd BufEnter * match ExtraWhitespace /\s\+$/
 ]])
 
+-- You may also want to reapply it on color scheme change
+cmd([[ match ExtraWhitespace /\s\+$/ ]])
