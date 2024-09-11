@@ -25,38 +25,38 @@ local on_attach = function(client, bufnr)
 
   -- set keybinds
   -- show definition, references
-  keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts) 
+  keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
   -- got to declaration
-  keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts) 
+  keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
   -- see definition and make edits in window
-  keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts) 
+  keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
   -- go to implementation
-  keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts) 
+  keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   -- see available code actions
-  keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts) 
+  keymap.set("n", "<leader>ca", "<cmd>Lspsaga code_action<CR>", opts)
   -- smart rename
-  keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts) 
+  keymap.set("n", "<leader>rn", "<cmd>Lspsaga rename<CR>", opts)
   -- show  diagnostics for line
-  keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts) 
+  keymap.set("n", "<leader>D", "<cmd>Lspsaga show_line_diagnostics<CR>", opts)
   -- show diagnostics for cursor
-  keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts) 
+  keymap.set("n", "<leader>d", "<cmd>Lspsaga show_cursor_diagnostics<CR>", opts)
   -- jump to previous diagnostic in buffer
-  keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts) 
+  keymap.set("n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<CR>", opts)
   -- jump to next diagnostic in buffer
-  keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) 
+  keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts)
   -- show documentation for what is under cursor
-  keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) 
+  keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts)
   -- see outline on right hand side
-  keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) 
+  keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)
 
   -- typescript specific keymaps (e.g. rename file and update imports)
   if client.name == "tsserver" then
     -- rename file and update imports
-    keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>") 
+    keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
     -- organize imports (not in youtube nvim video)
-    keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>") 
+    keymap.set("n", "<leader>oi", ":TypescriptOrganizeImports<CR>")
     -- remove unused variables (not in youtube nvim video)
-    keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") 
+    keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>")
   end
 end
 

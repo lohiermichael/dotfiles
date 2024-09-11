@@ -29,28 +29,28 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     -- previous suggestion
-    ["<C-k>"] = cmp.mapping.select_prev_item(), 
+    ["<C-k>"] = cmp.mapping.select_prev_item(),
     -- next suggestion
-    ["<C-j>"] = cmp.mapping.select_next_item(), 
+    ["<C-j>"] = cmp.mapping.select_next_item(),
     -- TODO: fix, not working
     -- ["<C-b>"] = cmp.mapping.scroll_docs(-4),
     -- ["<C-f>"] = cmp.mapping.scroll_docs(4),
     -- show completion suggestions
-    ["<C-Space>"] = cmp.mapping.complete(), 
+    ["<C-Space>"] = cmp.mapping.complete(),
     -- close completion window
-    ["<C-e>"] = cmp.mapping.abort(), 
+    ["<C-e>"] = cmp.mapping.abort(),
     ["<CR>"] = cmp.mapping.confirm({ select = false }),
   }),
   -- sources for autocompletion
   sources = cmp.config.sources({
     -- lsp
-    { name = "nvim_lsp" }, 
+    { name = "nvim_lsp" },
     -- snippets
-    { name = "luasnip" }, 
+    { name = "luasnip" },
     -- text within current buffer
-    { name = "buffer" }, 
+    { name = "buffer" },
     -- file system paths
-    { name = "path" }, 
+    { name = "path" },
   }),
   -- configure lspkind for vs-code like icons
   formatting = {
