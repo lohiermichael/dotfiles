@@ -124,9 +124,9 @@ return packer.startup(function(use)
   })
 
   -- auto closing
-  -- autoclose parens, brackets, quotes, etc...
+  -- auto-close parentheses, brackets, quotes, etc...
   use("windwp/nvim-autopairs")
-  -- autoclose tags
+  -- auto-close tags
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" })
 
   -- git integration
