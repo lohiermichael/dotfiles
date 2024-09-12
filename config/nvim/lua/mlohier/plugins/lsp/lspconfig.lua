@@ -50,7 +50,7 @@ local on_attach = function(client, bufnr)
   keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts)
 
   -- typescript specific keymaps (e.g. rename file and update imports)
-  if client.name == "tsserver" then
+  if client.name == "ts_ls" then
     -- rename file and update imports
     keymap.set("n", "<leader>rf", ":TypescriptRenameFile<CR>")
     -- organize imports (not in youtube nvim video)
