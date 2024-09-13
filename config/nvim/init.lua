@@ -4,6 +4,7 @@ require("mlohier.core.colorscheme")
 require("mlohier.plugins-setup")
 require("mlohier.plugins.comment")
 require("mlohier.plugins.gitsigns")
+require("mlohier.plugins.harpoon")
 -- lspsaga should be imported be for lspconfig
 require("mlohier.plugins.lsp.lspsaga")
 require("mlohier.plugins.lsp.lspconfig")
