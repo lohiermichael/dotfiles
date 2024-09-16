@@ -107,3 +107,22 @@ vim.api.nvim_set_keymap(
   'n', '<Leader>c', '<Cmd>lua add_copyright()<CR>',
   { noremap = true, silent = true }
 )
+
+
+-- remove trailing spaces in the entire file
+function removeTrailingSpaces()
+  -- save the current cursor position
+  local current_pos = vim.fn.getpos(".")
+  -- Search and remove trailing spaces in the whole file
+  vim.cmd([[%s/\s\+$//e]])
+  -- prompt a message
+  vim.api.nvim_echo({{"Trailing spaces removed", "InfoMsg"}}, false, {})
+  -- Restore the cursor position after removal
+  vim.fn.setpos(".", current_pos)
+end
+
+-- create a keymap to call the function
+vim.api.nvim_set_keymap(
+  'n', '<leader>ts', '<Cmd>lua removeTrailingSpaces()<CR>',
+  { noremap = true, silent = true }
+)
