@@ -106,9 +106,6 @@ return packer.startup(function(use)
       { "nvim-treesitter/nvim-treesitter" },
     },
   })
-  -- additional functionality for typescript server
-  -- (e.g. rename file & update imports)
-  use("jose-elias-alvarez/typescript.nvim")
   -- vs-code like icons for autocompletion
   use("onsails/lspkind.nvim")
 
