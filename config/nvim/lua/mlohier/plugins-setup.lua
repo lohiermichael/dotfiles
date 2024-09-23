@@ -72,6 +72,12 @@ return packer.startup(function(use)
   -- fuzzy finder
   use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
 
+  -- Emmet
+  -- Emmet plugin
+  use("mattn/emmet-vim")
+  -- Emmet server
+  use("aca/emmet-ls")
+
   -- autocompletion
   -- completion plugin
   use("hrsh7th/nvim-cmp")

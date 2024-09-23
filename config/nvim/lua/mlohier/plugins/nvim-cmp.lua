@@ -16,6 +16,12 @@ if not lspkind_status then
   return
 end
 
+-- import lspconfig plugin safely
+local lspconfig_status, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_status then
+  return
+end
+
 luasnip.filetype_extend("javascriptreact", { "html" })
 luasnip.filetype_extend("typescriptreact", { "html" })
 
@@ -54,6 +60,8 @@ cmp.setup({
     { name = "buffer" },
     -- file system paths
     { name = "path" },
+    -- Emmet completions for HTML, JSX and TSX
+    { name = "emmet" },
   }),
   -- configure lspkind for vs-code like icons
   formatting = {
@@ -61,5 +69,15 @@ cmp.setup({
       maxwidth = 50,
       ellipsis_char = "...",
     }),
+  },
+})
+
+-- Enable for HTML, JSX, TSX
+lspconfig.emmet_ls.setup({
+  filetypes = {
+    "html",
+    "css",
+    "javascriptreact",
+    "typescriptreact"
   },
 })
