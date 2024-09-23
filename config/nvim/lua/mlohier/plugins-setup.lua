@@ -47,7 +47,7 @@ return packer.startup(function(use)
   -- tmux and split window navigator
   use("christoomey/vim-tmux-navigator")
 
-  -- maximizes and restors current window
+  -- maximizes and restores current window
   use("szw/vim-maximizer")
 
   -- essential plugins
