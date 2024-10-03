@@ -25,3 +25,14 @@ Mode: insert
 
 # Markdown preview
 - :MarkdownPreview -> launch the preview in the browser
+
+Tmux
+----
+
+- Ctrl-b [   -> enter copy mode
+
+Mode: copy
+
+- v          -> select text
+- y          -> copy select text
+- q          -> exit copy code
