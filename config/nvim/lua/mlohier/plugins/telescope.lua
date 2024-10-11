@@ -23,11 +23,33 @@ telescope.setup({
         ["<C-j>"] = actions.move_selection_next,
       },
     },
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+      '--hidden',        -- Search hidden files
+      '--no-ignore',     -- Include files ignored by .gitignore
+      '--glob', '!.git/',          -- Exclude .git directory
+      '--glob', '!venv/',          -- Exclude venv directory
+      '--glob', '!node_modules/',  -- Exclude node_modules directory
+    },
   },
   pickers = {
     find_files = {
       hidden = true,  -- Show hidden files
-      find_command = { 'rg', '--files', '--hidden', '--no-ignore' },  -- Use ripgrep with `--no-ignore`
+      find_command = {
+        'rg',
+        '--files',
+        '--hidden',
+        '--no-ignore',
+        '--glob', '!.git/',
+        '--glob', '!venv/',
+        '--glob', '!node_modules/',
+      },  -- Use ripgrep with `--no-ignore`
     },
   },
 })
