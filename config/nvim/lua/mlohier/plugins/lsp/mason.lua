@@ -10,7 +10,13 @@ if not mason_lspconfig_status then
   return
 end
 
-mason.setup()
+mason.setup({
+  ensure_installed = {
+    "mypy",
+    "ruff",
+    "pyright",
+  },
+})
 
 mason_lspconfig.setup({
   -- list of servers for mason to install
@@ -19,6 +25,7 @@ mason_lspconfig.setup({
     "emmet_ls",
     "html",
     "lua_ls",
+    "pyright",
     "tailwindcss",
     "ts_ls",
   },

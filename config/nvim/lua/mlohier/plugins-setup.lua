@@ -115,6 +115,11 @@ return packer.startup(function(use)
   -- vs-code like icons for autocompletion
   use("onsails/lspkind.nvim")
 
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    ft = { "python" },
+  })
+
   -- treesitter configuration
   use({
     "nvim-treesitter/nvim-treesitter",
