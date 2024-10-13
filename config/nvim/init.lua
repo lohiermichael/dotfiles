@@ -1,6 +1,6 @@
-require("mlohier.core.options")
-require("mlohier.core.keymaps")
 require("mlohier.core.colorscheme")
+require("mlohier.core.keymaps")
+require("mlohier.core.options")
 require("mlohier.plugins-setup")
 require("mlohier.plugins.comment")
 require("mlohier.plugins.gitsigns")
