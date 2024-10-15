@@ -47,9 +47,21 @@ end
 -- used to enable autocompletion (assign to every lsp server config)
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
+-- configure css server
+lspconfig["cssls"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
 
 -- configure html server
 lspconfig["html"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
+
+
+-- configure Python server: pyright
+lspconfig["pyright"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
@@ -62,14 +74,3 @@ lspconfig["ts_ls"].setup({
   },
 })
 
--- configure css server
-lspconfig["cssls"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
-
--- configure Python server: pyright
-lspconfig["pyright"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
