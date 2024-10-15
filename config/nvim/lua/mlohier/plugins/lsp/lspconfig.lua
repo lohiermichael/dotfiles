@@ -59,6 +59,10 @@ lspconfig["html"].setup({
   on_attach = on_attach,
 })
 
+lspconfig["jsonls"].setup({
+  capabilities = capabilities,
+  on_attach = on_attach,
+})
 
 -- configure Python server: pyright
 lspconfig["pyright"].setup({
