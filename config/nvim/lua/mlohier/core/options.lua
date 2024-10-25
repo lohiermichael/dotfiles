@@ -57,7 +57,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 -- consider "-" as part of a word
- opt.iskeyword:append("-")
+opt.iskeyword:append("-")
 
 -- automatically save and load cursor position in files
 api.nvim_create_augroup("restore_cursor_position", { clear = true })
