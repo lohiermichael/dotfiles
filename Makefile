@@ -41,6 +41,7 @@ uninstall-dotfiles:
 BREWS += fd
 BREWS += neovim
 BREWS += ripgrep
+BREWS += ruby
 BREWS += terminal-notifier
 BREWS += tmux
 BREWS += tree
