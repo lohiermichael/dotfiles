@@ -59,6 +59,36 @@ opt.splitbelow = true
 -- consider "-" as part of a word
 opt.iskeyword:append("-")
 
+-- enable auto-read for automatically reloading files changed outside of neovim
+opt.autoread = true
+
+-- reduce idle time for faster response
+opt.updatetime = 250
+
+-- create augroup to manage auto-reloading
+local reload_group = api.nvim_create_augroup("AutoReload", { clear = true })
+
+-- check external changes when vim gains focus or entering buffer
+api.nvim_create_autocmd({"FocusGained", "BufEnter"}, {
+    group = reload_group,
+    pattern = "*",
+    command = "checktime"
+})
+
+-- force reload when shell indicates file changed
+api.nvim_create_autocmd("FileChangedShell", {
+    group = reload_group,
+    pattern = "*",
+    command = "edit!"
+})
+
+-- notification when file is reloaded
+api.nvim_create_autocmd("FileChangedShellPost", {
+    group = reload_group,
+    pattern = "*",
+    command = [[echohl WarningMsg | echo "File changed on disk. Buffer reloaded." | echohl None]]
+})
+
 -- automatically save and load cursor position in files
 api.nvim_create_augroup("restore_cursor_position", { clear = true })
 api.nvim_create_autocmd("BufReadPost", {
