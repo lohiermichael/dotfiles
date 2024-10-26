@@ -126,3 +126,23 @@ vim.api.nvim_set_keymap(
   'n', '<leader>ts', '<Cmd>lua removeTrailingSpaces()<CR>',
   { noremap = true, silent = true }
 )
+
+-- Function to open the current image file in macOS Preview app
+-- This allows for external editing of images when needed
+local function edit_image()
+ -- Get the full path of the current file
+ local filename = vim.fn.expand('%:p')
+ -- Use macOS 'open' command to launch Preview app with the image
+ vim.fn.system('open -a Preview "' .. filename .. '"')
+end
+
+-- Create a Neovim command :EditImage that calls our function
+vim.api.nvim_create_user_command('EditImage', edit_image, {})
+
+-- Map leader+ei to the EditImage command
+-- This provides a quick keyboard shortcut to open images in Preview
+vim.keymap.set('n', '<leader>ei', ':EditImage<CR>', {
+ noremap = true,
+ silent = true,
+ desc = "Edit image in Preview app"
+})
