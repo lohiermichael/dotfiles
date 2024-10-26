@@ -46,7 +46,7 @@ keymap.set("n", "<leader>tj", ":tabp<CR>")
 keymap.set("n", "<leader>m", ":MaximizerToggle<CR>")
 
 -- nvim-tree
-keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>ee", ":NvimTreeToggle<CR>")
 
 ----------------------
 -- telescope
