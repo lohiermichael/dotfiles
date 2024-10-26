@@ -71,7 +71,7 @@ keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", {})
 keymap.set("n", "<leader>gbl", ":Gitsigns blame_line<CR>", {})
 
 ----------------------
--- specific
+-- copyright
 ----------------------
 
 -- add a commented copyright line at the top of the buffer
@@ -108,6 +108,9 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+----------------------
+-- trailing spaces
+----------------------
 
 -- remove trailing spaces in the entire file
 function removeTrailingSpaces()
@@ -126,6 +129,10 @@ vim.api.nvim_set_keymap(
   'n', '<leader>ts', '<Cmd>lua removeTrailingSpaces()<CR>',
   { noremap = true, silent = true }
 )
+
+----------------------
+-- image edit
+----------------------
 
 -- Function to open the current image file in macOS Preview app
 -- This allows for external editing of images when needed
