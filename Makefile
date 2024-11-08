@@ -39,6 +39,7 @@ uninstall-dotfiles:
 # Installation as CLI apps
 ##########################
 BREWS += fd
+BREWS += git-lfs
 BREWS += neovim
 BREWS += ripgrep
 BREWS += ruby
