@@ -112,6 +112,33 @@ cmd [[highlight ColorColumn ctermbg=none guibg=white]]
 opt.spelllang = 'en_us'
 opt.spell = true
 
+-- create an autocommand group for our settings
+local spell_group = api.nvim_create_augroup(
+  "SpellCheckConfig",
+  { clear = true }
+)
+
+-- configure spell checking per buffer
+api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+    group = spell_group,
+    pattern = {"*.ts", "*.tsx", "*.js", "*.jsx"},
+    callback = function()
+        -- disable spell checking for everything except comments
+        vim.opt_local.spell = true
+        vim.wo.spell = true
+
+        -- only spell check comments
+        cmd([[
+          syn match Comment "//.*$" contains=@Spell
+          syn region Comment start="/\*" end="\*/" contains=@Spell
+        ]])
+
+        -- don't spell check strings or code
+        cmd([[syn spell notoplevel]])
+    end
+})
+
+
 -- highlight trailing spaces
 cmd([[
     " Define the highlight for trailing spaces
