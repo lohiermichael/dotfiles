@@ -20,10 +20,10 @@ local on_attach = function(client, bufnr)
   -- set keybinds
   -- show definition, references
   keymap.set("n", "gf", "<cmd>Lspsaga lsp_finder<CR>", opts)
-  -- got to declaration
-  keymap.set("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-  -- see definition and make edits in window
-  keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", opts)
+  -- go to definition
+  keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
+  -- see definition and make edits in window (peek)
+  keymap.set("n", "gp", "<cmd>Lspsaga peek_definition<CR>", opts)
   -- go to implementation
   keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
   -- see available code actions
