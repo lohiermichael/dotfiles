@@ -34,6 +34,7 @@ telescope.setup({
       '--hidden',        -- Search hidden files
       '--no-ignore',     -- Include files ignored by .gitignore
       '--glob', '!.git/',          -- Exclude .git directory
+      '--glob', '!.next/',         -- Exclude .next directory
       '--glob', '!venv/',          -- Exclude venv directory
       '--glob', '!node_modules/',  -- Exclude node_modules directory
     },
@@ -47,6 +48,7 @@ telescope.setup({
         '--hidden',
         '--no-ignore',
         '--glob', '!.git/',
+        '--glob', '!.next/',
         '--glob', '!venv/',
         '--glob', '!node_modules/',
       },  -- Use ripgrep with `--no-ignore`
