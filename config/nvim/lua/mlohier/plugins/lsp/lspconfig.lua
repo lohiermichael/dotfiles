@@ -72,9 +72,15 @@ lspconfig["pyright"].setup({
 
 -- configure typescript server with plugin
 lspconfig["ts_ls"].setup({
-  server = {
-    capabilities = capabilities,
-    on_attach = on_attach,
+  init_options = {
+    preferences = {
+      importModuleSpecifierPreference = "non-relative",
+    },
   },
+  cmd = { "typescript-language-server", "--stdio" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json"),
+  single_file_support = true,
+  capabilities = capabilities,
+  on_attach = on_attach,
 })
-
