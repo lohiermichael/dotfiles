@@ -51,6 +51,23 @@ local capabilities = cmp_nvim_lsp.default_capabilities()
 lspconfig["cssls"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
+  settings = {
+    css = { validate = true,
+      lint = {
+        unknownAtRules = "ignore"
+      }
+    },
+    scss = { validate = true,
+      lint = {
+        unknownAtRules = "ignore"
+      }
+    },
+    less = { validate = true,
+      lint = {
+        unknownAtRules = "ignore"
+      }
+    },
+  }
 })
 
 -- configure html server
