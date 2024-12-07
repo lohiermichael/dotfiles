@@ -121,7 +121,7 @@ local spell_group = api.nvim_create_augroup(
 -- configure spell checking per buffer
 api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     group = spell_group,
-    pattern = {"*.ts", "*.tsx", "*.js", "*.jsx"},
+    pattern = {"*.mjs", "*.js", "*.jsx", "*.ts", "*.tsx"},
     callback = function()
         -- disable spell checking for everything except comments
         vim.opt_local.spell = true
