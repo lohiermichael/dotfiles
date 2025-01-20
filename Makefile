@@ -43,6 +43,7 @@ BREWS += git-lfs
 BREWS += neovim
 BREWS += ripgrep
 BREWS += ruby
+BREWS += stripe/stripe-cli/stripe
 BREWS += supabase/tap/supabase
 BREWS += terminal-notifier
 BREWS += tmux
