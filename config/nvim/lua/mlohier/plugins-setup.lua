@@ -56,6 +56,8 @@ return packer.startup(function(use)
 
   -- comment
   use("numToStr/Comment.nvim")
+  -- TypeScript comments
+  use('JoosepAlviste/nvim-ts-context-commentstring')
 
   -- file explorer
   use("nvim-tree/nvim-tree.lua")
