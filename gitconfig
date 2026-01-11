@@ -9,7 +9,7 @@
   ra = rebase --abort
   rc = rebase --continue
   ri = rebase --interactive
-  rp = reset -p HEAD^
+  rp = reset HEAD^
   s = status --short --branch
   wip = commit -asm 'wip'
 
