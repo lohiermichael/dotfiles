@@ -9,3 +9,6 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # For Ruby
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 export PATH="`gem env gemdir`/bin:$PATH"
+
+# Claude
+export PATH="$HOME/.local/bin:$PATH"
