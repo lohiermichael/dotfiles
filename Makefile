@@ -39,6 +39,7 @@ uninstall-dotfiles:
 # Installation as CLI apps
 ##########################
 BREWS += fd
+BREWS += ffmpeg
 BREWS += git-lfs
 BREWS += neovim
 BREWS += ripgrep
@@ -60,7 +61,7 @@ BREWS_CASK += iterm2
 brew:
 	brew update
 	brew install $(BREWS)
-	brew install $(BREWS_CASK) --cask
+	$(foreach cask,$(BREWS_CASK),brew list --cask $(cask) &>/dev/null || brew install --cask $(cask);)
 
 # TODO: try the auto-generated helper
 .PHONY: help

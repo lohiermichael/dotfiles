@@ -13,25 +13,7 @@
       <string>/usr/bin/hidutil</string>
       <string>property</string>
       <string>--set</string>
-      <string>
-      <!--
-      Switch Caps lock and Escape
-      0x700000039: Caps lock
-      0x700000029: Escape
-       -->
-        {
-          "UserKeyMapping": [
-            {
-              "HIDKeyboardModifierMappingSrc":0x700000039,
-              "HIDKeyboardModifierMappingDst":0x700000029
-            },
-            {
-              "HIDKeyboardModifierMappingSrc":0x700000029,
-              "HIDKeyboardModifierMappingDst":0x700000039
-            }
-          ]
-        }
-      </string>
+      <string>{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029},{"HIDKeyboardModifierMappingSrc":0x700000029,"HIDKeyboardModifierMappingDst":0x700000039}]}</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
